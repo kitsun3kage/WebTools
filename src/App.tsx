@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import type { ComponentType } from "react";
+import type { LucideIcon } from "lucide-react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -55,14 +55,14 @@ import CaseTool from "./tools/CaseTool";
 import SlugTool from "./tools/SlugTool";
 import DateTool from "./tools/DateTool";
 
-type ToolComponent = ComponentType;
+type ToolComponent = React.ComponentType;
 
 interface ToolDefinition {
   id: string;
   name: string;
   description: string;
   category: string;
-  icon: ComponentType<{ size?: number; strokeWidth?: number }>;
+  icon: LucideIcon;
   component: ToolComponent;
 }
 
